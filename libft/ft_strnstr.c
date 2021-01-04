@@ -1,10 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/04 12:37:39 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 12:49:16 by vazra            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	unsigned int	n;
-	size_t		len_little;
+	size_t			len_little;
 
 	if (*little == '\0')
 		return (char *)(big);

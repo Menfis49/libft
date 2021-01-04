@@ -1,6 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/04 12:59:50 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 13:01:17 by vazra            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/libft.h"
-
 
 static char			**ft_malloc_error(char **tab)
 {
@@ -25,7 +35,7 @@ static unsigned int	ft_get_nb_strs(char const *s, char c)
 		return (0);
 	i = 0;
 	nb_strs = 0;
-	while (s[i] && s[i] == c) //c가 제일 앞에, 여러 개 연속으로 있을 때 패스
+	while (s[i] && s[i] == c)
 		i++;
 	while (s[i])
 	{
@@ -39,7 +49,7 @@ static unsigned int	ft_get_nb_strs(char const *s, char c)
 		i++;
 	}
 	if (s[i - 1] != c)
-		nb_strs++; //마지막이 c로 안 끝났으면 +1
+		nb_strs++;
 	return (nb_strs);
 }
 
@@ -48,12 +58,12 @@ static void			ft_get_next_str(char **next_str, unsigned int *next_str_len,
 {
 	unsigned int i;
 
-	*next_str += *next_str_len; //실제 next_str 주소 ++
+	*next_str += *next_str_len;
 	*next_str_len = 0;
 	i = 0;
 	while (**next_str && **next_str == c)
 		(*next_str)++;
-	while ((*next_str)[i]) //갯수 샐 때는 지역변수 i 이용
+	while ((*next_str)[i])
 	{
 		if ((*next_str)[i] == c)
 			return ;
@@ -73,7 +83,7 @@ char				**ft_split(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb_strs = ft_get_nb_strs(s, c);
-	if (!(tab = (char **)malloc(sizeof(char *) * (nb_strs + 1)))) //마지막 tab[i]에도 NULL보장
+	if (!(tab = (char **)malloc(sizeof(char *) * (nb_strs + 1))))
 		return (NULL);
 	i = 0;
 	next_str = (char *)s;
@@ -89,94 +99,3 @@ char				**ft_split(char const *s, char c)
 	tab[i] = NULL;
 	return (tab);
 }
-
-
-
-
-
-/*
-   int	ft_count_words(char const *s, char c)
-   {
-   int i;
-   int nb_words;
-
-   i = 0;
-   nb_words = 0;
-   while(s[i] == c)
-   i++;
-   while (s[i])
-   {
-   while (s[i] == c)
-   i++;
-   while (s[i] && s[i] != c)
-   i++;
-   if (s[i] == c || s[i] == '\0')
-   nb_words++;
-   while (s[i] && s[i] == c)
-   i++;
-   if (s[i] == '\0')
-   return (nb_words);
-   }
-   return (nb_words);
-   }
-
-   int	ft_len_words(char const *s, int *start, char c)
-   {
-   int i;
-   int st;
-
-   i = 0;
-   st = *start;
-   while (s[st] != c && s[st] != '\0')
-   {
-   st++;
-   i++;
-   }
-   return (i);
-   }
-
-   char	*ft_copy(char const *s, int *start, int *len_word, char c)
-   {
-   char *result;
-   int i;
-
-   i = 0;
-   if (!(result = malloc(sizeof(*result) * (*len_word + 1))))
-   return (0);
-   while (s[*start] != c && s[*start] != '\0')
-   {
-   result[i] = s[*start];
-   i++;
-   (*start)++;
-   }
-   return (result);
-   }
-
-   char	**ft_split(char const *s, char c)
-   {
-   char	**result;
-   int	nbr_words;
-   int	len_word;
-   int	i;
-   int	start;
-
-   i = 0;
-   len_word = 0;
-   start = 0;
-   nbr_words = ft_count_words(s, c);
-   printf("nb_words = %d\n", nbr_words);
-if (!(result = malloc(sizeof(*result) * (nbr_words + 1))))
-	return (0);
-while (i < nbr_words)
-{
-	while (s[start] == c)
-		start++;
-	len_word = ft_len_words(s, &start, c);
-	result[i] = ft_copy(s, &start, &len_word, c);
-	i++;
-}
-if (!(result[i] = malloc(sizeof(**result) * 1)))
-	return (0);
-	result[i] = 0;
-	return (result);
-	}*/

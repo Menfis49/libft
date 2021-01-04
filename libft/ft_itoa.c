@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/04 12:35:01 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 13:01:37 by vazra            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "includes/libft.h"
 
@@ -16,7 +27,7 @@ static int	ft_nblen(unsigned int n)
 
 char		*ft_itoa(int n)
 {
-	char		*dest;
+	char			*dest;
 	unsigned int	len;
 	unsigned int	nb;
 	unsigned int	i;
