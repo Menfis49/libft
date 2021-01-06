@@ -1,32 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 12:36:25 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 12:50:36 by vazra            ###   ########.fr       */
+/*   Created: 2021/01/04 13:56:17 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 13:57:34 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "includes/libft.h"
-
-char	*ft_strdup(const char *s)
+/*
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	int		i;
-	size_t	size;
-	char	*result;
-
-	i = 0;
-	size = ft_strlen(s);
-	if (!(result = malloc(sizeof(*result) * (size + 1))))
-		return (0);
-	while (s[i] != '\0')
-	{
-		result[i] = s[i];
-		i++;
-	}
-	result[i] = '\0';
-	return (result);
-}
+}*/

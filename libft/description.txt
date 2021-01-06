@@ -1,0 +1,85 @@
+memset : recup une adresse et un caractere et une taille et remplie a partir de cette adresse avec le caractere le nombre de size
+
+bzero : recup une adresse et une size et remplie a partir de cette adresse de \0 le nombre de size
+
+memcpy : recup une adresse de dest et une adresse de src et une taille et copy le nombre de size a partir de src dans la desti (notre responsabilite d'avoir la place necessaire, resultat non garanti avec chevauchement)
+
+memccpy : comme cpy sauf que la fonction prend en plus un int qui correspond a un caractere et la copie s'arrete apres la premiere occurence de ce caractere, soit a la fin de size si le carac n'apparait pas dans src (en cas de chevauchement, resultat non garanti)
+
+memmove : recup une adresse de dest et une adresse de src et une taille et copy le nombre de size a partir de src dans la desti (passe par des variable temporaires qui recup src donc marche en cas de chevauchement)
+
+memchr : recup adresse et size ainsi qu'un caractere a recherche (sous forme int), et renvoie un pointeur vers la premiere occurence de ce carac dans la chaine si elle le contient ou null sinon
+
+memcmp : recup deux adresses et une size et compare deux a deux chaque octet, tant que c'est egal, ca avance le nombre de size, et ca renvoie 0. Si pas egal, pour le premier octet qui differe entre les deux blocs, ca renvoie une valeur negative si le premier bloc est plus petit, et une valeur positive si il est plus grand
+
+strlen : longueur d'une chaine de carateres (\0 non compris)
+
+isalpha : prend un int et renvoie 1 si ce int correspond a une lettre min ou maj, 0 sinon
+
+isdigit : prend un int et renvoie 1 si ce int correspond a un chiffre, 0 sinon
+
+isalnum : prend un int et renvoie 1 si ce int correspond a une lettre min ou maj ou a un chiffre, 0 sinon
+
+isascii : prend un int et renvoie 1 si ce int correspond a un carac ascii (entre 0 et 127), 0 sinon
+
+isprint : prend un int et renvoie 1 si ce int correspond a un carac imprimable (entre 32 et 126), 0 sinon
+
+toupper : prend un int et si il correspond a une lettre min (entre 97 et 122), lui soustrait 32 ce qui le transforme en maj, puis renvoie ce int (si pas une lettre min, renvoie juste le int)
+
+tolower : prend un int et si il correspond a une lettre maj (entre 65 et 90), lui rajoute 32 ce qui le transforme en min, puis renvoie ce int (si pas une lettre maj, renvoie juste le int)
+
+strchr : prend une string et un int, qui correspond a un carac qu'on recherche, et si la string contient ce caractere, renvoie un pointeur sur la premiere occurence de celui ci, si elle le contient, pas revoie NULL
+
+strrchr : pareil sauf que ca renvoie la derniere occurence (recherche par la droite)
+
+strncmp : prend deux strings et une size, et compare chaque caractere deux par deux jusqu'a ce qu'ils soient differents, qu'une string soit finie, ou qu'on arrive au bout de size. renvoie 0 si egal, et le carac diff de s1 - celui de s2. (meme si il y a un \0 qui est egal a 0)
+
+strlcpy : copie src dans dest avec une size qui correspond a la longueur de dest allouee. renvoie la taille de src
+
+strlcat : 
+
+strnstr : prend deux strings et une taille et cherche la premiere occurence de la deuxieme string dans la premiere, sans depasser size. Si elle est pas dedans : return null, sinon ca retourne un pointeur vers le premier caractere de la premiere occurence de la deuxieme chaine dans la premiere
+
+atoi : prend une string, passe les whitespaces, regarde si y'a un - ou un + (un seul, et recupere le signe), et recupere les chiffres qui suivent (s'arrete des qu'il y a autre chose) et transforme en int le nombre de la string et le return, avec son signe.
+
+calloc : comme malloc : alloue un bloc memoire. Sauf que calloc initialise tous les octets a 0, et la ou malloc prend un parametre : la taille totale du bloc a allouer, calloc prend deux parametres : le nombre d'elements consecutifs a allouer et la taille d'un element
+
+strdup : recupere une string, et en cree une en l'allouant avec malloc, et copie la string dans la nouvelle, puis la retourne.
+
+substr : prend une string, un int start qui correspond au start et une size. Cree une nouvelle string, et copie la premiere dedans A PARTIR du int start et jusqua size
+
+strjoin : prend deux string et en cree une nouvelle en l'allouant, et la remplie avec la concatenation des deux.
+
+strtrim : 
+
+split : prend une chaine et un caractere, cree un tableau de strings, et le remplie avec chaque mini string de la premiere chaine delimitee par le debut, la fin, et le caractere en parametre. le tableau fini par NULL
+
+itoa : prend un int, et cree une string en l'allouant. renvoie la string representant l'int en caracteres (nombres negatifs aussi)
+
+strmapi :
+
+putchar_fd : prend un caractere et un int correspondant au fd. Ecrit le caractere sur le fd
+
+putstr_fd : prend une string et un int correspondant au fd. Ecrit la string  sur le fd
+
+putendl_fd : prend une string et un int correspondant au fd. Ecrit la string sur le fd suivie d'un retour a la ligne
+
+putnbr_fd : prend un int n et un int correspondant au fd. Ecrit le int n sur le fd
+
+lstnew :
+
+lstadd_front :
+
+lstsize :
+
+lstlast :
+
+lstadd_back :
+
+lstdelone :
+
+lstclear :
+
+lstiter :
+
+lstmap :
