@@ -25,10 +25,12 @@ isascii : prend un int et renvoie 1 si ce int correspond a un carac ascii (entre
 isprint : prend un int et renvoie 1 si ce int correspond a un carac imprimable (entre 32 et 126), 0 sinon
 
 toupper : prend un int et si il correspond a une lettre min (entre 97 et 122), lui soustrait 32 ce qui le transforme en maj, puis renvoie ce int (si pas une lettre min, renvoie juste le int)
+:q
+
 
 tolower : prend un int et si il correspond a une lettre maj (entre 65 et 90), lui rajoute 32 ce qui le transforme en min, puis renvoie ce int (si pas une lettre maj, renvoie juste le int)
 
-strchr : prend une string et un int, qui correspond a un carac qu'on recherche, et si la string contient ce caractere, renvoie un pointeur sur la premiere occurence de celui ci, si elle le contient, pas revoie NULL
+strchr : prend une string et un int, qui correspond a un carac qu'on recherche, et si la string contient ce caractere, renvoie un pointeur sur la premiere occurence de celui ci, si elle le contient pas renvoie NULL
 
 strrchr : pareil sauf que ca renvoie la derniere occurence (recherche par la droite)
 
