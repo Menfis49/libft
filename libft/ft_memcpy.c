@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 12:37:28 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 12:48:16 by vazra            ###   ########.fr       */
+/*   Created: 2021/01/04 12:33:26 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 12:33:30 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
 
-	i = 0;
-	while ((unsigned char)s1[i] == (unsigned char)s2[i]
-			&& s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	if (n > 0)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	else
-		return (0);
+	tmp1 = (unsigned char *)src;
+	tmp2 = (unsigned char *)dest;
+	if (dest == NULL && src == NULL)
+		return (dest);
+	while (n > 0)
+	{
+		*tmp2++ = *tmp1++;
+		n--;
+	}
+	return (dest);
 }

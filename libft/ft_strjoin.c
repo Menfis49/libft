@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/01/04 12:37:28 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 12:48:16 by vazra            ###   ########.fr       */
+/*   Created: 2021/01/04 12:36:33 by vazra             #+#    #+#             */
+/*   Updated: 2021/01/04 12:51:42 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
+	char		*result;
+	size_t		size_s1;
+	size_t		size_s2;
 
-	i = 0;
-	while ((unsigned char)s1[i] == (unsigned char)s2[i]
-			&& s1[i] != '\0' && s2[i] != '\0' && i < n - 1)
-		i++;
-	if (n > 0)
-		return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	else
+	if (!(s1) && !(s2))
 		return (0);
+	else if (!(s1) || !(s2))
+		return (!(s1) ? ft_strdup(s2) : ft_strdup(s1));
+	size_s1 = ft_strlen(s1);
+	size_s2 = ft_strlen(s2);
+	if (!(result = malloc(sizeof(*result) * (size_s1 + size_s2 + 1))))
+		return (0);
+	ft_strlcpy(result, s1, size_s1 + 1);
+	ft_strlcat(result + size_s1, s2, size_s2 + 1);
+	return (result);
 }
