@@ -6,11 +6,11 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:04:05 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 13:31:32 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/15 10:38:20 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 void	ft_putendl(char const *s)
 {

@@ -6,11 +6,11 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:37:17 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 12:37:18 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/15 10:40:55 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {

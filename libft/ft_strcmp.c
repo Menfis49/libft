@@ -6,11 +6,11 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 12:35:27 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 13:33:48 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/15 10:40:26 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 int	ft_strcmp(const char *s1, const char *s2)
 {

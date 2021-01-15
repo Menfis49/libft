@@ -6,11 +6,11 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:12:57 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/04 13:13:10 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/15 10:41:16 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "libft.h"
 
 char	*ft_strncpy(char *s1, const char *s2, size_t n)
 {

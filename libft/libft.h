@@ -6,7 +6,7 @@
 /*   By: vazra <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/01/04 13:13:59 by vazra             #+#    #+#             */
-/*   Updated: 2021/01/12 11:32:17 by vazra            ###   ########.fr       */
+/*   Updated: 2021/01/15 10:32:39 by vazra            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,15 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 									void (*del)(void *));
+void				ft_putchar(char c);
+void				ft_putendl(char const *s);
+void				ft_putnbr(int n);
+void				ft_putstr(char const *s);
+char				*ft_strcat(char *s1, const char *s2);
+int					ft_strcmp(const char *s1, const char *s2);
+char				*ft_strcpy(char *dst, const char *src);
+char				*ft_strncat(char *s1, const char *s2, size_t n);
+int					ft_strncmp(const char *s1, const char *s2, size_t n);
+char				*ft_strncpy(char *s1, const char *s2, size_t n);
 
 #endif
